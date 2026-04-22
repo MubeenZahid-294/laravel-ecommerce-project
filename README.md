@@ -70,11 +70,13 @@
 ---
 
 ## 📁 Project Structure
+
+```
 zyvora/
 ├── app/
 │   ├── Http/
 │   │   ├── Controllers/
-│   │   │   ├── Admin/          # Admin controllers
+│   │   │   ├── Admin/
 │   │   │   ├── HomeController
 │   │   │   ├── ProductController
 │   │   │   ├── CartController
@@ -104,8 +106,8 @@ zyvora/
 │       ├── products/
 │       └── ...
 └── routes/
-└── web.php
----
+    └── web.php
+```
 
 ## 🚀 Installation Guide
 
