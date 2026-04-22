@@ -1,59 +1,243 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛒 Zyvora - Laravel E-Commerce Project
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" />
 </p>
 
-## About Laravel
+<p align="center">
+  A full-featured e-commerce web application built with Laravel 12 for the Web Technology Lab project.
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🎥 Demo Video
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+👉 [Click here to watch the demo](https://drive.google.com/file/d/1IHWgaaFj-eOtDiesMwph94oDFT1__nTb/view?usp=drive_link)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## ✨ Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🛍️ User Features
+- 🏠 Home page with auto-sliding banner/slider
+- 🛒 Product listing with category filter and search
+- 📦 Single product page with details
+- ❤️ Wishlist — save favourite products
+- 🛒 Shopping cart with quantity management
+- 💳 Checkout with delivery address
+- 📋 Order history page
+- ⭐ Product ratings and reviews
+- 📩 Contact form (logged in users only)
+- 🔐 Login and Register with authentication
 
-## Laravel Sponsors
+### ⚙️ Admin Panel Features
+- 📊 Dashboard with stats (products, orders, users, messages)
+- 🛍️ Products management (Add, Edit, Delete) with image upload
+- 📦 Orders management with status update
+- 👥 Customers list
+- ✉️ Contact messages with email reply system
+- 📋 Yajra Datatables integration for all tables
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🔧 Technical Features
+- Laravel Breeze authentication
+- Yajra Datatables for server-side tables
+- Laravel Mail with Gmail SMTP for real emails
+- Image upload and storage
+- Admin middleware for panel protection
+- Session-based shopping cart
+- Responsive design with Bootstrap 5
+- Swiper.js slider
+- 10 product categories with 115+ products
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🖥️ Tech Stack
 
-## Contributing
+| Technology | Version |
+|---|---|
+| Laravel | 12.x |
+| PHP | 8.2 |
+| MySQL | 8.0 |
+| Bootstrap | 5.3 |
+| Yajra Datatables | Latest |
+| Laravel Breeze | Latest |
+| Swiper.js | 10 |
+| Font Awesome | 6.4 |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📁 Project Structure
+zyvora/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/          # Admin controllers
+│   │   │   ├── HomeController
+│   │   │   ├── ProductController
+│   │   │   ├── CartController
+│   │   │   ├── CheckoutController
+│   │   │   ├── ContactController
+│   │   │   ├── ReviewController
+│   │   │   └── WishlistController
+│   │   └── Middleware/
+│   │       └── AdminMiddleware
+│   └── Models/
+│       ├── Product
+│       ├── Order
+│       ├── OrderItem
+│       ├── ContactMessage
+│       ├── Review
+│       └── Wishlist
+├── database/
+│   ├── migrations/
+│   └── seeders/
+│       └── ProductSeeder
+├── resources/
+│   └── views/
+│       ├── layouts/
+│       │   ├── app.blade.php
+│       │   └── admin.blade.php
+│       ├── admin/
+│       ├── products/
+│       └── ...
+└── routes/
+└── web.php
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🚀 Installation Guide
 
-## Security Vulnerabilities
+### Requirements
+- PHP 8.2+
+- Composer
+- MySQL
+- Node.js & NPM
+- XAMPP or Laragon
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Steps
 
-## License
+**1. Clone the repository**
+```bash
+git clone https://github.com/YOURUSERNAME/laravel-ecommerce-project.git
+cd laravel-ecommerce-project
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**2. Install PHP dependencies**
+```bash
+composer install
+```
+
+**3. Install Node dependencies**
+```bash
+npm install
+```
+
+**4. Copy environment file**
+```bash
+cp .env.example .env
+```
+
+**5. Generate application key**
+```bash
+php artisan key:generate
+```
+
+**6. Configure database in `.env`**
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ecommerce
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+**7. Run migrations and seed database**
+```bash
+php artisan migrate
+php artisan db:seed --class=ProductSeeder
+```
+
+**8. Create storage link**
+```bash
+php artisan storage:link
+```
+
+**9. Run the application**
+```bash
+npm run dev
+php artisan serve
+```
+
+**10. Make yourself admin**
+```bash
+php artisan tinker
+App\Models\User::where('email', 'your@email.com')->update(['is_admin' => true]);
+```
+
+---
+
+## 📧 Mail Configuration
+
+To enable real email replies in the contact form, update `.env`:
+
+```env
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=your@gmail.com
+MAIL_PASSWORD=your-app-password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=your@gmail.com
+MAIL_FROM_NAME="Zyvora"
+```
+
+> Generate a Gmail App Password from: https://myaccount.google.com/apppasswords
+
+---
+
+## 🗄️ Database Tables
+
+| Table | Description |
+|---|---|
+| users | Registered customers and admins |
+| products | Store products with categories |
+| orders | Customer orders |
+| order_items | Individual items in each order |
+| contact_messages | Contact form messages |
+| reviews | Product ratings and reviews |
+| wishlists | User saved products |
+
+---
+
+## 📸 Pages Overview
+
+| Page | Description |
+|---|---|
+| `/` | Home page with slider and featured products |
+| `/products` | All products with search and category filter |
+| `/products/{id}` | Single product with reviews and wishlist |
+| `/cart` | Shopping cart |
+| `/checkout` | Order placement |
+| `/my-orders` | User order history |
+| `/wishlist` | Saved products |
+| `/contact` | Contact form |
+| `/admin/dashboard` | Admin panel |
+| `/admin/products` | Manage products |
+| `/admin/orders` | Manage orders |
+| `/admin/users` | View customers |
+| `/admin/contact` | Reply to messages |
+
+---
+
+## 👤 Author
+
+**Developed for Web Technology Lab Project**
+
+---
+
+## 📝 License
+
+This project is for educational purposes only.
